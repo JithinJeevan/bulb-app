@@ -9,60 +9,28 @@ const BulbApp = () => {
   const [colour,setColour]=useState('grey');
   const [texts,setTexts]=useState('OFF');
 
-  var count = false;
-  
-  const colorChange=(value,text)=>{
-    
-      if (!count){
-        count = true;
-        setColor(value='orange');
-        setText(text="ON");
-
-       
-         
-        
-      }
-
-      else   {
-        count = false;
-        setColor(value='grey');
-        setText(text="OFF");
-
-        
-          
-      }
-      
-
-      
-      return (value,text); 
-      
-
-  }
-
-  const colourChange=(value,text)=>{
-    
-    if (!count){
-      count = true;
-      setColour(value='orange');
-      setTexts(text="ON");   
-      
+  const colorChange=()=>{
+    if (text=="OFF"){
+      setColor('grey');
+      setText("ON");
     }
-
     else   {
-      count = false;
-      
-
-      setColour(value='grey');
-      setTexts(text="OFF");
-        
-    }
-    
-
-    
-    return (value,text); 
-    
-
+      setColor('orange');
+      setText("OFF");    
+    }  
 }
+const colourChange=()=>{  
+  if (texts==="OFF"){
+    setColour('grey');
+    setTexts("ON");
+  }
+  else   {
+    setColour('orange');
+    setTexts("OFF");    
+  }  
+}   
+  
+  
 
 
 
