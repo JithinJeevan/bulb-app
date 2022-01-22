@@ -28,8 +28,7 @@ const BulbApp = () => {
         setColor(value='grey');
         setText(text="OFF");
 
-        setColour(value='grey');
-        setTexts(text="OFF");
+        
           
       }
       
